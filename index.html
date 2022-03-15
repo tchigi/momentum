@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+          <button class="volume player-icon"></button>
+          <input type="range" value="100" min="0" max="100" step="1" class="progress volume-progress" />
+        </div>
+        <div class="audio-control">
+          <div class="audio-info"><span class="audio-time"></span><span class="audio-name"></span></div>
+          <input type="range" value="0" min="0" max="100" step="1" class="progress audio-progress" />
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" value="Minsk" placeholder="" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" placeholder="" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+      <div class="settings">
+        <div class="settings-container">
+          <div class="settings-item">
+            <p class="language"></p>
+            <select name="language" id="language" class="input-settings">
+              <option value="en" selected>English</option>
+              <option value="ru">Русский</option>
+            </select>
+          </div>
+          <hr />
+          <div class="bg-source settings-item">
+            <p id="bgText"></p>
+            <select name="api" id="api" class="input-settings">
+              <option value="git" selected>GitHub</option>
+              <option value="uns">Unsplash API</option>
+              <option value="flickr">Flickr API</option>
+            </select>
+          </div>
+          <hr />
+          <div class="bg-tags settings-item">
+            <p id="tagsText"></p>
+            <input class="input-settings tags" id="tag" type="text" placeholder="Enter tag" readonly />
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="timeText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenTime" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="dateText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenDate" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="greetingText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenGreeting" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="quotesText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenQuotes" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="weatherText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenWeather" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="audioText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenAudio" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+          <div class="hide-items settings-item">
+            <p id="todoText"></p>
+            <label class="switch">
+              <input type="checkbox" id="hiddenTodo" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <button class="settings-button settings-icon"></button>
+      <div class="todo">
+        <div class="close-btn close-icon"></div>
+        <div class="todo-container">
+          <h1 class="todo-title"></h1>
+          <div class="add-todo">
+            <input type="text" class="input-todo-text" />
+            <button id="add-task-btn" class="button-container"></button>
+          </div>
+          <h2 class="today-title"></h2>
+          <div class="todos-container"></div>
+        </div>
+      </div>
+      <button class="todo-button todo-icon"></button>
+      <div class="footer-info">
+        <a href="https://github.com/tchigi" target="_blank">Tchigi</a>
+        <p>2021</p>
+        <a href="https://rs.school/js/" class="rss-footer" target="_blank"></a>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
